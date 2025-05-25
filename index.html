@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>جمعية عائلة البطن</title>
   <style>
     body {
@@ -51,8 +51,8 @@
   <div class="container" id="login-section">
     <h1>جمعية عائلة البطن</h1>
     <p>تسجيل الدخول</p>
-    <input type="email" id="email" placeholder="الإيميل">
-    <input type="password" id="password" placeholder="كلمة المرور">
+    <input type="email" id="email" placeholder="الإيميل" />
+    <input type="password" id="password" placeholder="كلمة المرور" />
     <button onclick="login()">دخول</button>
   </div>
 
@@ -69,7 +69,8 @@
       "68unknown91@gmail.com": "u6891n",
       "hazem8686al@gmail.com": "h6868l",
       "saidhamdy179@gmail.com": "179",
-      "khairyaboalqasem@gmail.com": "kh.a.q"
+      "khairyaboalqasem@gmail.com": "kh.a.q",
+      "mo010108088@gmail.com": "088"
     };
 
     // دالة التحقق من بيانات الدخول
@@ -77,11 +78,8 @@
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value.trim();
 
-      // التحقق من الإيميل وكلمة السر
       if (users[email] && users[email] === password) {
-        // إخفاء صفحة تسجيل الدخول
         document.getElementById("login-section").classList.add("hidden");
-        // إظهار لوحة التحكم
         document.getElementById("dashboard").classList.remove("hidden");
       } else {
         alert("بيانات الدخول غير صحيحة. من فضلك تأكد من الإيميل وكلمة المرور.");
